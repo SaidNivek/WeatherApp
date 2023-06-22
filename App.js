@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import { View, Text, SafeAreaView } from 'react-native'
 
 export default function App() {
-  const message = "Hello"
   return (
-    <View style={{ height: 100, width: 100, backgroundColor: 'orange', display: 'flex', justifyContent: 'center'}}>
-        <Text>{message} World</Text>
-    </View>
-  );
+    // SafeAreaView will move the Views into the space on the phone that is most viewable and not used by default phone UI elements, such as the status bar at the top of the phone, etc
+    <SafeAreaView>
+      <View>
+        <Text>
+          Current Weather
+        </Text>
+      </View>
+    </SafeAreaView>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
