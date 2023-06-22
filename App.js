@@ -7,7 +7,16 @@ const App = () => {
     // SafeAreaView will move the Views into the space on the phone that is most viewable and not used by default phone UI elements, such as the status bar at the top of the phone, etc
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
-        <Text>Current Weather</Text>
+        <Text style={styles.temp}>6</Text>
+        <Text style={styles.feels}>Feels like 5</Text>
+        <View style={styles.highLowWrapper}>
+          <Text style={styles.highLow}>High: 8</Text>
+          <Text style={styles.highLow}>Low: 6</Text>
+        </View>
+      </View>
+      <View style={styles.bodyWrapper}>
+        <Text style={styles.description}>It's sunny</Text>
+        <Text style={styles.message}>It's perfect t-shirt weather.</Text>
       </View>
     </SafeAreaView>
   )
@@ -17,13 +26,39 @@ const App = () => {
 // Flexbox - You don't need to use display: 'flex' on mobile, as it's not needed. However, flex: "num" will tell the compiler how much of the screen should be filled
 // You can have multiple objects within the styles Component, which can then be passed to other pieces of the Class component, as needed
 const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    backgroundColor: 'pink'
+  },
   container: {
-    backgroundColor: 'pink',
     flex: 1,
     alignItems: 'center'
   },
-  wrapper: {
-    flex: 1
+  temp: {
+    color: 'black',
+    // You don't specify values like px or rem, just the number in React Native, and they represent density independent pixels
+    fontSize: 48
+  },
+  feels: {
+    fontSize: 30,
+    color: 'black'
+  },
+  highLow: {
+    color: 'black',
+    fontSize: 20
+  },
+  highLowWrapper: {
+    flexDirection: 'row'
+  },
+  bodyWrapper: {
+    justifyContent: 'flex-end',
+    alignItems: 'flex-start'
+  },
+  description: {
+    fontSize: 48
+  },
+  message: {
+    fontSize: 30
   }
 })
 
