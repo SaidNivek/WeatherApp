@@ -1,12 +1,15 @@
 import React from 'react'
 // StyleSheet is used so we can write CSS as an object to make our code more clean and not use inline styles (see below)
 import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
+// The below icon comes from icons.expo.fyi - the icons are installed automatically when we start the native project with expo
+import { Feather } from '@expo/vector-icons';
 
 const App = () => {
   return (
     // SafeAreaView will move the Views into the space on the phone that is most viewable and not used by default phone UI elements, such as the status bar at the top of the phone, etc
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
+      <Feather name="sun" size={100} color="black" />
         <Text style={styles.temp}>6</Text>
         <Text style={styles.feels}>Feels like 5</Text>
         <View style={styles.highLowWrapper}>
