@@ -2,7 +2,7 @@ import React from 'react'
 // StyleSheet is used so we can write CSS as an object to make our code more clean and not use inline styles (see below)
 import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
 // The below icon comes from icons.expo.fyi - the icons are installed automatically when we start the native project with expo
-import { Feather } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons'
 
 const CurrentWeather = () => {
   return (
@@ -18,8 +18,8 @@ const CurrentWeather = () => {
         </View>
       </View>
       <View style={styles.bodyWrapper}>
-        <Text style={styles.description}>It's sunny</Text>
-        <Text style={styles.message}>It's perfect t-shirt weather.</Text>
+        <Text style={styles.description}>It&#39;s sunny</Text>
+        <Text style={styles.message}>It&#39;s perfect t-shirt weather.</Text>
       </View>
     </SafeAreaView>
   )
