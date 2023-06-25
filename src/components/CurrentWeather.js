@@ -9,7 +9,7 @@ const CurrentWeather = () => {
     // SafeAreaView will move the Views into the space on the phone that is most viewable and not used by default phone UI elements, such as the status bar at the top of the phone, etc
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
-      <Feather name="sun" size={100} color="black" />
+        <Feather name="sun" size={100} color="black" />
         <Text style={styles.temp}>6</Text>
         <Text style={styles.feels}>Feels like 5</Text>
         <View style={styles.highLowWrapper}>
