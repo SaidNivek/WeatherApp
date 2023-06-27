@@ -54,14 +54,14 @@ const Item = (props) => {
 }
 
 const UpcomingWeather = () => {
-    const renderItem = ({item}) => {
+    const renderItem = ({item}) => (
         <Item 
             condition={item.weather[0].main} 
             dt_txt={item.dt_txt}    
             min={item.main.temp_min}    
             max={item.main.temp_max}                
         />
-}
+    )
    
 
     return (
@@ -70,6 +70,7 @@ const UpcomingWeather = () => {
             <FlatList 
                 data={DATA}
                 renderItem={renderItem}
+                keyExtractor={(item) => item.dt_txt}
             />
         </SafeAreaView>
     )
