@@ -5,7 +5,8 @@ import {
   Text,
   FlatList,
   View,
-  StatusBar
+  StatusBar,
+  ImageBackground
 } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
@@ -72,12 +73,17 @@ const UpcomingWeather = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Upcoming Weather</Text>
-      <FlatList
-        data={DATA}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.dt_txt}
-      />
+      <ImageBackground
+        source={require('../../assets/clouds.jpg')}
+        style={styles.image}
+      >
+        <Text>Upcoming Weather</Text>
+        <FlatList
+          data={DATA}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.dt_txt}
+        />
+      </ImageBackground>
     </SafeAreaView>
   )
 }
@@ -85,8 +91,8 @@ const UpcomingWeather = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
-    backgroundColor: 'aqua' // a constant taking in the current height of the status bar or use 0
+    marginTop: StatusBar.currentHeight || 0, // a constant taking in the current height of the status bar or use 0
+    backgroundColor: 'teal'
   },
   item: {
     padding: 20,
@@ -105,6 +111,9 @@ const styles = StyleSheet.create({
   date: {
     color: 'white',
     fontSize: 15
+  },
+  image: {
+    flex: 1
   }
 })
 
