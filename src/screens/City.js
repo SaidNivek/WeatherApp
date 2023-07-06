@@ -14,8 +14,8 @@ const City = () => {
         source={require('../../assets/city-bkg.jpg')}
         style={styles.imageLayout}
       >
-        <Text style={[styles.cityName]}>London</Text>
-        <Text style={[styles.countryName]}>United Kingdom</Text>
+        <Text style={[styles.cityName, styles.cityText]}>London</Text>
+        <Text style={[styles.countryName, styles.cityText]}>UK</Text>
       </ImageBackground>
     </SafeAreaView>
   )
@@ -30,18 +30,16 @@ const styles = StyleSheet.create({
     flex: 1
   },
   cityName: {
-    justifyContent: 'center',
-    alignSelf: 'center',
-    fontSize: 40,
-    fontWeight: 'bold',
-    color: 'white'
+    fontSize: 40
   },
   countryName: {
+    fontSize: 30
+  },
+  cityText: {
     justifyContent: 'center',
     alignSelf: 'center',
-    fontSize: 30,
-    color: 'white',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: 'white'
   }
 })
 
