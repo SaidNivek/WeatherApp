@@ -23,7 +23,7 @@ const City = () => {
           <Text style={styles.populationText}>8000</Text>
         </View>
         <View style={styles.riseSetWrapper}>
-          <Feather name="sunset" size={50} color="white" />
+          <Feather name="sunrise" size={50} color="white" />
           <Text style={styles.riseSetText}>10:46:58am</Text>
           <Feather name="sunset" size={50} color="white" />
           <Text style={styles.riseSetText}>17:28:15pm</Text>
