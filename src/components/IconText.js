@@ -2,8 +2,7 @@ import React from 'react'
 import { Text, StyleSheet } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
-const IconText = (props) => {
-  const { iconName, iconColor, bodyText, bodyTextStyles } = props
+const IconText = ({ iconName, iconColor, bodyText, bodyTextStyles }) => {
   return (
     <>
       <Feather name={iconName} size={50} color={iconColor} />
