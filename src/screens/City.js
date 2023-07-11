@@ -1,4 +1,5 @@
 import React from 'react'
+import IconText from '../components/IconText'
 import {
   SafeAreaView,
   Text,
@@ -19,14 +20,26 @@ const City = () => {
         <Text style={[styles.cityName, styles.cityText]}>London</Text>
         <Text style={[styles.countryName, styles.cityText]}>UK</Text>
         <View style={styles.populationWrapper}>
-          <Feather name="user" size={50} color="black" />
-          <Text style={styles.populationText}>8000</Text>
+          <IconText
+            iconName={'user'}
+            iconColor={'black'}
+            bodyText={8000}
+            bodyTextStyles={styles.populationText}
+          />
         </View>
         <View style={styles.riseSetWrapper}>
-          <Feather name="sunrise" size={50} color="white" />
-          <Text style={styles.riseSetText}>10:46:58am</Text>
-          <Feather name="sunset" size={50} color="white" />
-          <Text style={styles.riseSetText}>17:28:15pm</Text>
+          <IconText
+            iconName={'sunrise'}
+            iconColor={'white'}
+            bodyText={'10:46:58am'}
+            bodyTextStyles={styles.riseSetText}
+          />
+          <IconText
+            iconName={'sunset'}
+            iconColor={'white'}
+            bodyText={'17:28:15pm'}
+            bodyTextStyles={styles.riseSetText}
+          />
         </View>
       </ImageBackground>
     </SafeAreaView>
