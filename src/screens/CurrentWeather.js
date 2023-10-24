@@ -24,24 +24,24 @@ const CurrentWeather = ({ weatherData }) => {
     weather
   } = weatherData
 
-  const weatherCondition = weather[0].main
+  const weatherCondition = weather[0]?.main
 
   return (
     // SafeAreaView will move the Views into the space on the phone that is most viewable and not used by default phone UI elements, such as the status bar at the top of the phone, etc
     <SafeAreaView
       style={[
         wrapper,
-        { backgroundColor: weatherType[weatherCondition].backgroundColor }
+        { backgroundColor: weatherType[weatherCondition]?.backgroundColor }
       ]}
     >
       <View style={container}>
         <Feather
-          name={weatherType[weatherCondition].icon}
+          name={weatherType[weatherCondition]?.icon}
           size={100}
           color="white"
         />
-        <Text style={tempStyles}>{temp}</Text>
-        <Text style={feels}>{`Feels like ${feels_like}`}</Text>
+        <Text style={tempStyles}>{temp}°</Text>
+        <Text style={feels}>{`Feels like ${feels_like}°`}</Text>
         <RowText
           messageOne={`High: ${temp_max}° `}
           messageTwo={`Low: ${temp_min}°`}
@@ -52,7 +52,7 @@ const CurrentWeather = ({ weatherData }) => {
       </View>
       <RowText
         messageOne={weather[0].description}
-        messageTwo={weatherType[weatherCondition].message}
+        messageTwo={weatherType[weatherCondition]?.message}
         containerStyles={bodyWrapper}
         messageOneStyles={description}
         messageTwoStyles={message}
@@ -66,8 +66,7 @@ const CurrentWeather = ({ weatherData }) => {
 // You can have multiple objects within the styles Component, which can then be passed to other pieces of the Class component, as needed
 const styles = StyleSheet.create({
   wrapper: {
-    flex: 1,
-    backgroundColor: 'pink'
+    flex: 1
   },
   container: {
     flex: 1,
@@ -97,10 +96,10 @@ const styles = StyleSheet.create({
     marginBottom: 40
   },
   description: {
-    fontSize: 48
+    fontSize: 43
   },
   message: {
-    fontSize: 30
+    fontSize: 25
   }
 })
 
