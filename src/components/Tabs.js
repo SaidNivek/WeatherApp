@@ -59,7 +59,7 @@ const Tabs = ({ weather }) => {
       </Tab.Screen>
       <Tab.Screen
         name={'City'}
-        component={City}
+
         options={{
           // eslint-disable-next-line react/no-unstable-nested-components
           tabBarIcon: ({ focused }) => (
@@ -70,7 +70,9 @@ const Tabs = ({ weather }) => {
             />
           )
         }}
-      />
+      >
+        {() => <City weatherData={weather.city} />}
+      </Tab.Screen>
     </Tab.Navigator>
   )
 }
