@@ -59,7 +59,6 @@ const Tabs = ({ weather }) => {
       </Tab.Screen>
       <Tab.Screen
         name={'City'}
-
         options={{
           // eslint-disable-next-line react/no-unstable-nested-components
           tabBarIcon: ({ focused }) => (
