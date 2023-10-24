@@ -66,7 +66,6 @@ const UpcomingWeather = () => {
         source={require('../../assets/upcoming-weather-img.jpg')}
         style={image}
       >
-        <Text>Upcoming Weather</Text>
         <FlatList
           data={DATA}
           renderItem={renderItem}
