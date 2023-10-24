@@ -4,6 +4,7 @@ import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
 // The below icon comes from icons.expo.fyi - the icons are installed automatically when we start the native project with expo
 import { Feather } from '@expo/vector-icons'
 import RowText from '../components/RowText'
+import { weatherType } from '../utilities/weatherType'
 
 const CurrentWeather = () => {
   const {
@@ -34,7 +35,7 @@ const CurrentWeather = () => {
       </View>
       <RowText
         messageOne={"It's sunny"}
-        messageTwo={"It's perfect t-shirt weather"}
+        messageTwo={weatherType['Thunderstorm'].message}
         containerStyles={bodyWrapper}
         messageOneStyles={description}
         messageTwoStyles={message}
